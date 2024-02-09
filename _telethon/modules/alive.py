@@ -57,7 +57,7 @@ async def alive_t(event):
     reply_msg += f"\nUptime: {uptime}"
     await event.edit(reply_msg)
 
-@client.on(events.NewMessage(outgoing=True, pattern=f"^{PREFIX}alive (.*)"))
+@client.on(events.NewMessage(outgoing=True, pattern=f"^{PREFIX}ping (.*)"))
 # @app.on(events.NewMessage(outgoing=True, pattern=f"^{PREFIX}ping (.*)"))
 async def _(event):
     if "-t" in event.text:
